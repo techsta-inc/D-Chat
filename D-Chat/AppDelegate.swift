@@ -9,11 +9,18 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // if #available で特定のOSのバージョンに対して処理を有効にできる
+        if #available(iOS 15.0, *) {
+            // TableViewをスクロールしたときにNavigationBarの色が薄くならないようにしている
+            let appearance = UINavigationBarAppearance()
+            appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+            appearance.configureWithTransparentBackground()
+            appearance.backgroundColor = .systemOrange
+            UINavigationBar.appearance().standardAppearance = appearance
+            UINavigationBar.appearance().compactAppearance = appearance
+            UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        }
         return true
     }
 
@@ -30,7 +37,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
-
 }
-

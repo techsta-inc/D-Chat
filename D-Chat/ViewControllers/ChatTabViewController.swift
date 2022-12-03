@@ -13,9 +13,9 @@ private enum ClassTabType: Equatable, CaseIterable {
     var tabTitle: String {
         switch self {
         case .friendList:
-            return "友達"
+            return L10n.friend
         case .talkList:
-            return "トーク"
+            return L10n.talk
         }
     }
     var viewController: UIViewController.Type {
@@ -48,6 +48,7 @@ final class ChatTabViewController: UITabBarController {
         appearance.backgroundColor = .systemOrange
         if #available(iOS 15.0, *) {
             tabBar.scrollEdgeAppearance = appearance
+            tabBar.standardAppearance = appearance
         } else {
             tabBar.standardAppearance = appearance
         }
@@ -62,9 +63,10 @@ final class ChatTabViewController: UITabBarController {
                 image: classTabType.image,
                 tag: index
             )
-            viewControllerList.append(viewController)
+            viewController.title = classTabType.tabTitle
+            let navigationController = UINavigationController(rootViewController: viewController)
+            viewControllerList.append(navigationController)
         }
         setViewControllers(viewControllerList, animated: false)
     }
 }
-
