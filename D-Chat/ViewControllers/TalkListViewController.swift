@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TalkListViewController: UIViewController {
+final class TalkListViewController: UIViewController {
     @IBOutlet var tableview: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
