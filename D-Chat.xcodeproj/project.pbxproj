@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D6E032B2938FD0E00844F62 /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6E03292938FD0E00844F62 /* FriendListViewController.swift */; };
+		3D6E032C2938FD0E00844F62 /* FriendListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D6E032A2938FD0E00844F62 /* FriendListViewController.xib */; };
+		3D6E032F2938FD2900844F62 /* TalkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6E032D2938FD2900844F62 /* TalkListViewController.swift */; };
+		3D6E03302938FD2900844F62 /* TalkListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D6E032E2938FD2900844F62 /* TalkListViewController.xib */; };
 		3D6E5AB72934F97400A74B0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6E5AB62934F97400A74B0F /* AppDelegate.swift */; };
 		3D6E5AB92934F97400A74B0F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6E5AB82934F97400A74B0F /* SceneDelegate.swift */; };
-		3D6E5ABB2934F97400A74B0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6E5ABA2934F97400A74B0F /* ViewController.swift */; };
-		3D6E5ABE2934F97400A74B0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D6E5ABC2934F97400A74B0F /* Main.storyboard */; };
+		3D6E5ABB2934F97400A74B0F /* ChatTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6E5ABA2934F97400A74B0F /* ChatTabViewController.swift */; };
+		3D6E5ABE2934F97400A74B0F /* ChatTabViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D6E5ABC2934F97400A74B0F /* ChatTabViewController.storyboard */; };
 		3D6E5AC02934F97600A74B0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D6E5ABF2934F97600A74B0F /* Assets.xcassets */; };
 		3D6E5AC32934F97600A74B0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D6E5AC12934F97600A74B0F /* LaunchScreen.storyboard */; };
 		3D6E5ACE2934F97600A74B0F /* D_ChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6E5ACD2934F97600A74B0F /* D_ChatTests.swift */; };
@@ -36,11 +40,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D6E03292938FD0E00844F62 /* FriendListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewController.swift; sourceTree = "<group>"; };
+		3D6E032A2938FD0E00844F62 /* FriendListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendListViewController.xib; sourceTree = "<group>"; };
+		3D6E032D2938FD2900844F62 /* TalkListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkListViewController.swift; sourceTree = "<group>"; };
+		3D6E032E2938FD2900844F62 /* TalkListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TalkListViewController.xib; sourceTree = "<group>"; };
 		3D6E5AB32934F97400A74B0F /* D-Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "D-Chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D6E5AB62934F97400A74B0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D6E5AB82934F97400A74B0F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3D6E5ABA2934F97400A74B0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3D6E5ABD2934F97400A74B0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3D6E5ABA2934F97400A74B0F /* ChatTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTabViewController.swift; sourceTree = "<group>"; };
+		3D6E5ABD2934F97400A74B0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ChatTabViewController.storyboard; sourceTree = "<group>"; };
 		3D6E5ABF2934F97600A74B0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D6E5AC22934F97600A74B0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D6E5AC42934F97600A74B0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,6 +84,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D6E03282938FCD000844F62 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3D6E5ABA2934F97400A74B0F /* ChatTabViewController.swift */,
+				3D6E5ABC2934F97400A74B0F /* ChatTabViewController.storyboard */,
+				3D6E03292938FD0E00844F62 /* FriendListViewController.swift */,
+				3D6E032A2938FD0E00844F62 /* FriendListViewController.xib */,
+				3D6E032D2938FD2900844F62 /* TalkListViewController.swift */,
+				3D6E032E2938FD2900844F62 /* TalkListViewController.xib */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		3D6E5AAA2934F97400A74B0F = {
 			isa = PBXGroup;
 			children = (
@@ -99,10 +120,9 @@
 		3D6E5AB52934F97400A74B0F /* D-Chat */ = {
 			isa = PBXGroup;
 			children = (
+				3D6E03282938FCD000844F62 /* ViewControllers */,
 				3D6E5AB62934F97400A74B0F /* AppDelegate.swift */,
 				3D6E5AB82934F97400A74B0F /* SceneDelegate.swift */,
-				3D6E5ABA2934F97400A74B0F /* ViewController.swift */,
-				3D6E5ABC2934F97400A74B0F /* Main.storyboard */,
 				3D6E5ABF2934F97600A74B0F /* Assets.xcassets */,
 				3D6E5AC12934F97600A74B0F /* LaunchScreen.storyboard */,
 				3D6E5AC42934F97600A74B0F /* Info.plist */,
@@ -231,9 +251,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D6E032C2938FD0E00844F62 /* FriendListViewController.xib in Resources */,
 				3D6E5AC32934F97600A74B0F /* LaunchScreen.storyboard in Resources */,
 				3D6E5AC02934F97600A74B0F /* Assets.xcassets in Resources */,
-				3D6E5ABE2934F97400A74B0F /* Main.storyboard in Resources */,
+				3D6E5ABE2934F97400A74B0F /* ChatTabViewController.storyboard in Resources */,
+				3D6E03302938FD2900844F62 /* TalkListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +280,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D6E5ABB2934F97400A74B0F /* ViewController.swift in Sources */,
+				3D6E032B2938FD0E00844F62 /* FriendListViewController.swift in Sources */,
+				3D6E5ABB2934F97400A74B0F /* ChatTabViewController.swift in Sources */,
+				3D6E032F2938FD2900844F62 /* TalkListViewController.swift in Sources */,
 				3D6E5AB72934F97400A74B0F /* AppDelegate.swift in Sources */,
 				3D6E5AB92934F97400A74B0F /* SceneDelegate.swift in Sources */,
 			);
@@ -297,12 +321,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3D6E5ABC2934F97400A74B0F /* Main.storyboard */ = {
+		3D6E5ABC2934F97400A74B0F /* ChatTabViewController.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				3D6E5ABD2934F97400A74B0F /* Base */,
 			);
-			name = Main.storyboard;
+			name = ChatTabViewController.storyboard;
 			sourceTree = "<group>";
 		};
 		3D6E5AC12934F97600A74B0F /* LaunchScreen.storyboard */ = {
@@ -441,7 +465,7 @@
 				INFOPLIST_FILE = "D-Chat/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = ChatTabViewController;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -469,7 +493,7 @@
 				INFOPLIST_FILE = "D-Chat/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = ChatTabViewController;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
