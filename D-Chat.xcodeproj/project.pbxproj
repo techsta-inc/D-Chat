@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D2CDC33293B54F20006A612 /* FriendListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2CDC32293B54F20006A612 /* FriendListModel.swift */; };
+		3D2CDC35293B54FD0006A612 /* TalkListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2CDC34293B54FD0006A612 /* TalkListModel.swift */; };
+		3D2CDC38293B55910006A612 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2CDC37293B55910006A612 /* Friend.swift */; };
+		3D2CDC3A293B55960006A612 /* Talk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2CDC39293B55960006A612 /* Talk.swift */; };
 		3D6E032B2938FD0E00844F62 /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6E03292938FD0E00844F62 /* FriendListViewController.swift */; };
 		3D6E032C2938FD0E00844F62 /* FriendListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D6E032A2938FD0E00844F62 /* FriendListViewController.xib */; };
 		3D6E032F2938FD2900844F62 /* TalkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6E032D2938FD2900844F62 /* TalkListViewController.swift */; };
@@ -40,6 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D2CDC32293B54F20006A612 /* FriendListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListModel.swift; sourceTree = "<group>"; };
+		3D2CDC34293B54FD0006A612 /* TalkListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkListModel.swift; sourceTree = "<group>"; };
+		3D2CDC37293B55910006A612 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		3D2CDC39293B55960006A612 /* Talk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Talk.swift; sourceTree = "<group>"; };
 		3D6E03292938FD0E00844F62 /* FriendListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewController.swift; sourceTree = "<group>"; };
 		3D6E032A2938FD0E00844F62 /* FriendListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendListViewController.xib; sourceTree = "<group>"; };
 		3D6E032D2938FD2900844F62 /* TalkListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkListViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +92,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D2CDC31293B54DD0006A612 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3D2CDC36293B55870006A612 /* ViewDataModels */,
+				3D2CDC32293B54F20006A612 /* FriendListModel.swift */,
+				3D2CDC34293B54FD0006A612 /* TalkListModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3D2CDC36293B55870006A612 /* ViewDataModels */ = {
+			isa = PBXGroup;
+			children = (
+				3D2CDC37293B55910006A612 /* Friend.swift */,
+				3D2CDC39293B55960006A612 /* Talk.swift */,
+			);
+			path = ViewDataModels;
+			sourceTree = "<group>";
+		};
 		3D6E03282938FCD000844F62 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				3D6E03282938FCD000844F62 /* ViewControllers */,
+				3D2CDC31293B54DD0006A612 /* Models */,
 				3D6E5AB62934F97400A74B0F /* AppDelegate.swift */,
 				3D6E5AB82934F97400A74B0F /* SceneDelegate.swift */,
 				3D6E5ABF2934F97600A74B0F /* Assets.xcassets */,
@@ -283,8 +311,12 @@
 				3D6E032B2938FD0E00844F62 /* FriendListViewController.swift in Sources */,
 				3D6E5ABB2934F97400A74B0F /* ChatTabViewController.swift in Sources */,
 				3D6E032F2938FD2900844F62 /* TalkListViewController.swift in Sources */,
+				3D2CDC33293B54F20006A612 /* FriendListModel.swift in Sources */,
 				3D6E5AB72934F97400A74B0F /* AppDelegate.swift in Sources */,
+				3D2CDC3A293B55960006A612 /* Talk.swift in Sources */,
 				3D6E5AB92934F97400A74B0F /* SceneDelegate.swift in Sources */,
+				3D2CDC35293B54FD0006A612 /* TalkListModel.swift in Sources */,
+				3D2CDC38293B55910006A612 /* Friend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
