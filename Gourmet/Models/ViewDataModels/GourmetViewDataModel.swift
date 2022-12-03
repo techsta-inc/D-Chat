@@ -9,4 +9,5 @@ import Foundation
 
 struct GourmetViewDataModel {
     let name: String
+    let shopIcon: URL?
 }

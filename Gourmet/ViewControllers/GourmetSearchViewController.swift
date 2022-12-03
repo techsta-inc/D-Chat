@@ -17,6 +17,7 @@ final class GourmetSearchViewController: UIViewController {
         tableview.dataSource = self
         searchBar.delegate = self
         gourmetSearchModel.delegate = self
+        tableview.register(GourmetTableViewCell.self)
     }
 }
 
@@ -49,8 +50,8 @@ extension GourmetSearchViewController: UITableViewDataSource {
         gourmetSearchModel.gourmetList.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = gourmetSearchModel.gourmetList[indexPath.row].name
+        let cell = tableView.dequeueReusableCell(GourmetTableViewCell.self, for: indexPath)
+        cell.configure(gourmet: gourmetSearchModel.gourmetList[indexPath.row])
         return cell
     }
 }
