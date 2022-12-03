@@ -69,4 +69,3 @@ final class ChatTabViewController: UITabBarController {
         setViewControllers(viewControllerList, animated: false)
     }
 }
-

@@ -8,7 +8,6 @@
 import UIKit
 
 class TalkListViewController: UIViewController {
-
     @IBOutlet var tableview: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +19,6 @@ class TalkListViewController: UIViewController {
 
 // MARK: UITableViewDelegate
 extension TalkListViewController: UITableViewDelegate {
-    
 }
 // MARK: UITableViewDatasource
 extension TalkListViewController: UITableViewDataSource {

@@ -5,11 +5,10 @@
 //  Created by Tanaka Soushi on 2022/11/28.
 //
 
-import XCTest
 @testable import D_Chat
+import XCTest
 
-class D_ChatTests: XCTestCase {
-
+class DChatTests: XCTestCase {
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -32,5 +31,4 @@ class D_ChatTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-
 }
