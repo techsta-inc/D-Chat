@@ -12,6 +12,9 @@
 		3D2CDC35293B54FD0006A612 /* TalkListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2CDC34293B54FD0006A612 /* TalkListModel.swift */; };
 		3D2CDC38293B55910006A612 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2CDC37293B55910006A612 /* Friend.swift */; };
 		3D2CDC3A293B55960006A612 /* Talk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2CDC39293B55960006A612 /* Talk.swift */; };
+		3D2CDC40293B7D620006A612 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D2CDC3F293B7D620006A612 /* Localizable.strings */; };
+		3D2CDC45293B82510006A612 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2CDC43293B82510006A612 /* Asset.swift */; };
+		3D2CDC46293B82510006A612 /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2CDC44293B82510006A612 /* Localized.swift */; };
 		3D6E032B2938FD0E00844F62 /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6E03292938FD0E00844F62 /* FriendListViewController.swift */; };
 		3D6E032C2938FD0E00844F62 /* FriendListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D6E032A2938FD0E00844F62 /* FriendListViewController.xib */; };
 		3D6E032F2938FD2900844F62 /* TalkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6E032D2938FD2900844F62 /* TalkListViewController.swift */; };
@@ -54,6 +57,9 @@
 		3D2CDC34293B54FD0006A612 /* TalkListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkListModel.swift; sourceTree = "<group>"; };
 		3D2CDC37293B55910006A612 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		3D2CDC39293B55960006A612 /* Talk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Talk.swift; sourceTree = "<group>"; };
+		3D2CDC3F293B7D620006A612 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		3D2CDC43293B82510006A612 /* Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
+		3D2CDC44293B82510006A612 /* Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localized.swift; sourceTree = "<group>"; };
 		3D6E03292938FD0E00844F62 /* FriendListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewController.swift; sourceTree = "<group>"; };
 		3D6E032A2938FD0E00844F62 /* FriendListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendListViewController.xib; sourceTree = "<group>"; };
 		3D6E032D2938FD2900844F62 /* TalkListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkListViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +142,41 @@
 			path = ViewDataModels;
 			sourceTree = "<group>";
 		};
+		3D2CDC3C293B7D0F0006A612 /* UIResource */ = {
+			isa = PBXGroup;
+			children = (
+				3D2CDC3E293B7D2C0006A612 /* Generated */,
+				3D2CDC3D293B7D240006A612 /* Resource */,
+			);
+			path = UIResource;
+			sourceTree = "<group>";
+		};
+		3D2CDC3D293B7D240006A612 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				3D2CDC42293B82010006A612 /* Localizable */,
+				3D6E5ABF2934F97600A74B0F /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		3D2CDC3E293B7D2C0006A612 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				3D2CDC43293B82510006A612 /* Asset.swift */,
+				3D2CDC44293B82510006A612 /* Localized.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		3D2CDC42293B82010006A612 /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				3D2CDC3F293B7D620006A612 /* Localizable.strings */,
+			);
+			path = Localizable;
+			sourceTree = "<group>";
+		};
 		3D6E03282938FCD000844F62 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,11 +215,11 @@
 		3D6E5AB52934F97400A74B0F /* D-Chat */ = {
 			isa = PBXGroup;
 			children = (
+				3D2CDC3C293B7D0F0006A612 /* UIResource */,
 				3D6E03282938FCD000844F62 /* ViewControllers */,
 				3D2CDC31293B54DD0006A612 /* Models */,
 				3D6E5AB62934F97400A74B0F /* AppDelegate.swift */,
 				3D6E5AB82934F97400A74B0F /* SceneDelegate.swift */,
-				3D6E5ABF2934F97600A74B0F /* Assets.xcassets */,
 				3D6E5AC12934F97600A74B0F /* LaunchScreen.storyboard */,
 				3D6E5AC42934F97600A74B0F /* Info.plist */,
 			);
@@ -223,7 +264,8 @@
 			buildConfigurationList = 3D6E5ADD2934F97600A74B0F /* Build configuration list for PBXNativeTarget "D-Chat" */;
 			buildPhases = (
 				6312F2B2F47C5DADEA7CE2EC /* [CP] Check Pods Manifest.lock */,
-				3D2CDC3B293B6C2C0006A612 /* ShellScript */,
+				3D2CDC41293B81790006A612 /* Run Script SwiftGen */,
+				3D2CDC3B293B6C2C0006A612 /* Run Script SwiftLint */,
 				3D6E5AAF2934F97400A74B0F /* Sources */,
 				3D6E5AB02934F97400A74B0F /* Frameworks */,
 				3D6E5AB12934F97400A74B0F /* Resources */,
@@ -324,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D6E032C2938FD0E00844F62 /* FriendListViewController.xib in Resources */,
+				3D2CDC40293B7D620006A612 /* Localizable.strings in Resources */,
 				3D6E5AC32934F97600A74B0F /* LaunchScreen.storyboard in Resources */,
 				3D6E5AC02934F97600A74B0F /* Assets.xcassets in Resources */,
 				3D6E5ABE2934F97400A74B0F /* ChatTabViewController.storyboard in Resources */,
@@ -348,7 +391,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3D2CDC3B293B6C2C0006A612 /* ShellScript */ = {
+		3D2CDC3B293B6C2C0006A612 /* Run Script SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -357,6 +400,7 @@
 			);
 			inputPaths = (
 			);
+			name = "Run Script SwiftLint";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -364,6 +408,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which \"${PODS_ROOT}/SwiftLint/swiftlint\" >/dev/null; then\n  \"${PODS_ROOT}/SwiftLint/swiftlint\" --autocorrect\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		3D2CDC41293B81790006A612 /* Run Script SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script SwiftGen";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$PODS_ROOT/SwiftGen/bin/swiftgen config run\n";
 		};
 		6312F2B2F47C5DADEA7CE2EC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -440,7 +502,9 @@
 			files = (
 				3D6E032B2938FD0E00844F62 /* FriendListViewController.swift in Sources */,
 				3D6E5ABB2934F97400A74B0F /* ChatTabViewController.swift in Sources */,
+				3D2CDC45293B82510006A612 /* Asset.swift in Sources */,
 				3D6E032F2938FD2900844F62 /* TalkListViewController.swift in Sources */,
+				3D2CDC46293B82510006A612 /* Localized.swift in Sources */,
 				3D2CDC33293B54F20006A612 /* FriendListModel.swift in Sources */,
 				3D6E5AB72934F97400A74B0F /* AppDelegate.swift in Sources */,
 				3D2CDC3A293B55960006A612 /* Talk.swift in Sources */,

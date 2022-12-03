@@ -1,0 +1,16 @@
+# ハードコードをしないようにはできるが、
+# ローカライズを機能させるためには別途対応が必要
+strings:
+  inputs: ./D-Chat/UIResource/Resource/Localizable/Localizable.strings
+  outputs:
+    - templateName: flat-swift5
+      output: ./D-Chat/UIResource/Generated/Localized.swift
+      params:
+        publicAccess: true
+xcassets:
+  inputs: ./D-Chat/UIResource/Resource/Assets.xcassets
+  outputs:
+    - templateName: swift5
+      output: ./D-Chat/UIResource/Generated/Asset.swift
+      params:
+        publicAccess: true
