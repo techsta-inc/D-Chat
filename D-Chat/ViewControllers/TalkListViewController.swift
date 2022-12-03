@@ -11,7 +11,6 @@ class TalkListViewController: UIViewController {
     @IBOutlet var tableview: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "トーク"
         tableview.delegate = self
         tableview.dataSource = self
     }

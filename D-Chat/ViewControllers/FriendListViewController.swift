@@ -12,7 +12,6 @@ final class FriendListViewController: UIViewController {
     private let friendListModel = FriendListModel()
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "友達"
         tableview.delegate = self
         tableview.dataSource = self
     }

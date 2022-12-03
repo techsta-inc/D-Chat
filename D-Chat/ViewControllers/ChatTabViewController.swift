@@ -13,9 +13,9 @@ private enum ClassTabType: Equatable, CaseIterable {
     var tabTitle: String {
         switch self {
         case .friendList:
-            return "友達"
+            return L10n.friend
         case .talkList:
-            return "トーク"
+            return L10n.talk
         }
     }
     var viewController: UIViewController.Type {
@@ -63,6 +63,7 @@ final class ChatTabViewController: UITabBarController {
                 image: classTabType.image,
                 tag: index
             )
+            viewController.title = classTabType.tabTitle
             let navigationController = UINavigationController(rootViewController: viewController)
             viewControllerList.append(navigationController)
         }
