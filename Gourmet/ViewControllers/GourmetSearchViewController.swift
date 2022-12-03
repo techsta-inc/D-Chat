@@ -9,11 +9,31 @@ import UIKit
 
 final class GourmetSearchViewController: UIViewController {
     @IBOutlet private var tableview: UITableView!
+    @IBOutlet private var searchBar: UISearchBar!
     private let gourmetSearchModel = GourmetSearchModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         tableview.delegate = self
         tableview.dataSource = self
+        searchBar.delegate = self
+        gourmetSearchModel.delegate = self
+    }
+}
+
+// MARK: GourmetSearchModelDelegate
+extension GourmetSearchViewController: GourmetSearchModelDelegate {
+    func searchSuccess() {
+        tableview.reloadData()
+    }
+    func searchError() {
+        // TODO: エラー時の実装をする
+    }
+}
+
+// MARK: UISearchBar
+extension GourmetSearchViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        gourmetSearchModel.search(text: searchBar.text)
     }
 }
 
