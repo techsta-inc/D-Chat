@@ -48,6 +48,7 @@ final class ChatTabViewController: UITabBarController {
         appearance.backgroundColor = .systemOrange
         if #available(iOS 15.0, *) {
             tabBar.scrollEdgeAppearance = appearance
+            tabBar.standardAppearance = appearance
         } else {
             tabBar.standardAppearance = appearance
         }
@@ -62,7 +63,8 @@ final class ChatTabViewController: UITabBarController {
                 image: classTabType.image,
                 tag: index
             )
-            viewControllerList.append(viewController)
+            let navigationController = UINavigationController(rootViewController: viewController)
+            viewControllerList.append(navigationController)
         }
         setViewControllers(viewControllerList, animated: false)
     }
