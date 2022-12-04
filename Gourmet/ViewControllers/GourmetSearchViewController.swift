@@ -5,17 +5,22 @@
 //  Created by Tanaka Soushi on 2022/12/02.
 //
 
+import CoreLocation
 import UIKit
 
 final class GourmetSearchViewController: UIViewController {
     @IBOutlet private var tableview: UITableView!
     @IBOutlet private var searchBar: UISearchBar!
     private let gourmetSearchModel = GourmetSearchModel()
+    private let locationManager = CLLocationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
         tableview.delegate = self
         tableview.dataSource = self
         searchBar.delegate = self
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestLocation()
         gourmetSearchModel.delegate = self
         tableview.register(GourmetTableViewCell.self)
     }
@@ -53,5 +58,18 @@ extension GourmetSearchViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(GourmetTableViewCell.self, for: indexPath)
         cell.configure(gourmet: gourmetSearchModel.gourmetList[indexPath.row])
         return cell
+    }
+}
+// MARK: CLLocationManagerDelegate
+extension GourmetSearchViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.last else { return }
+        let lat = Double(location.coordinate.latitude)
+        let long = Double(location.coordinate.longitude)
+        gourmetSearchModel.setLocation(lat: lat, long: long)
+    }
+    // 記述しておかないと実行時エラーになる
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("error: \(error.localizedDescription)")
     }
 }

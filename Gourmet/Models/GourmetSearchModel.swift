@@ -14,6 +14,7 @@ protocol GourmetSearchModelDelegate: AnyObject {
 
 final class GourmetSearchModel {
     weak var delegate: GourmetSearchModelDelegate?
+    private var location: (lat: Double, long: Double)?
     private let repository: GourmetRepositoryType
     private(set) var gourmetList: [GourmetViewDataModel] = []
     init(repository: GourmetRepositoryType = GourmetRepository()) {
@@ -21,7 +22,7 @@ final class GourmetSearchModel {
     }
     func search(text: String?) {
         guard let text = text else { return }
-        repository.search(keyword: text) { [weak self] result in
+        repository.search(keyword: text, location: location) { [weak self] result in
             switch result {
             case let .failure(error):
                 DispatchQueue.main.async { [weak self] in
@@ -40,5 +41,8 @@ final class GourmetSearchModel {
                 }
             }
         }
+    }
+    func setLocation(lat: Double, long: Double) {
+        location = (lat: lat, long: long)
     }
 }
