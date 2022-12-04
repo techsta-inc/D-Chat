@@ -22,7 +22,7 @@ struct GourmetAPI {
         init(queryItems: [URLQueryItem]) {
             let defaultQueryItems: [URLQueryItem] = [
                 .init(name: "format", value: "json"),
-                .init(name: "key", value: "1fcb68df514951cc"),
+                .init(name: "key", value: "YourAPIKey"),
                 .init(name: "count", value: "50")
             ]
             urlComponents.queryItems = defaultQueryItems + queryItems
