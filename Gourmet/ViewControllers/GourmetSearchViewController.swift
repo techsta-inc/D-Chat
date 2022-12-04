@@ -56,8 +56,15 @@ extension GourmetSearchViewController: UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(GourmetTableViewCell.self, for: indexPath)
-        cell.configure(gourmet: gourmetSearchModel.gourmetList[indexPath.row])
+        cell.configure(gourmet: gourmetSearchModel.gourmetList[indexPath.row], indexPath: indexPath)
+        cell.delegate = self
         return cell
+    }
+}
+// MARK: Gourmet
+extension GourmetSearchViewController: GourmetTableViewCellDelegate {
+    func favoriteButtonTapped(_ data: GourmetViewDataModel, indexPath: IndexPath) {
+        // Modelに通知
     }
 }
 // MARK: CLLocationManagerDelegate

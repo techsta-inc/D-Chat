@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let appearance = UINavigationBarAppearance()
             appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
             appearance.configureWithTransparentBackground()
-            appearance.backgroundColor = .systemOrange
+            appearance.backgroundColor = Asset.accentSubPrimary.color
             UINavigationBar.appearance().standardAppearance = appearance
             UINavigationBar.appearance().compactAppearance = appearance
             UINavigationBar.appearance().scrollEdgeAppearance = appearance
