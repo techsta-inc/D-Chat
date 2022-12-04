@@ -7,14 +7,35 @@
 
 import Foundation
 
+protocol GourmetSearchModelDelegate: AnyObject {
+    func searchSuccess()
+    func searchError()
+}
+
 final class GourmetSearchModel {
+    weak var delegate: GourmetSearchModelDelegate?
+    private let repository: GourmetRepositoryType
     private(set) var gourmetList: [GourmetViewDataModel] = []
-    init() {
-        setupTestUser()
+    init(repository: GourmetRepositoryType = GourmetRepository()) {
+        self.repository = repository
     }
-    private func setupTestUser() {
-        for i in 1..<21 {
-            gourmetList.append(.init(name: "テストデータ\(i)"))
+    func search(text: String?) {
+        guard let text = text else { return }
+        repository.search(keyword: text) { [weak self] result in
+            switch result {
+            case let .failure(error):
+                DispatchQueue.main.async { [weak self] in
+                    self?.delegate?.searchError()
+                }
+            case let .success(response):
+                let gourmetList = response.results.shop.map {
+                    GourmetViewDataModel(name: $0.name)
+                }
+                self?.gourmetList = gourmetList
+                DispatchQueue.main.async { [weak self] in
+                    self?.delegate?.searchSuccess()
+                }
+            }
         }
     }
 }

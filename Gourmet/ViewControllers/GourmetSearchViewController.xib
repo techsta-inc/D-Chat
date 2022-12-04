@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GourmetSearchViewController">
             <connections>
+                <outlet property="searchBar" destination="ceU-RI-pQC" id="dVA-Kf-HRd"/>
                 <outlet property="tableview" destination="bew-TZ-mRK" id="20H-f4-MqL"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

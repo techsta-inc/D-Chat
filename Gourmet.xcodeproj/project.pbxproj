@@ -14,6 +14,9 @@
 		3D2CDC46293B82510006A612 /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2CDC44293B82510006A612 /* Localized.swift */; };
 		3D2CDC49293B9C560006A612 /* GourmetViewDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2CDC48293B9C560006A612 /* GourmetViewDataModel.swift */; };
 		3D2CDC4B293BA0600006A612 /* FavoriteGourmetListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D2CDC4A293BA0600006A612 /* FavoriteGourmetListViewController.xib */; };
+		3D2CDC4E293BA92D0006A612 /* GourmetAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2CDC4D293BA92D0006A612 /* GourmetAPI.swift */; };
+		3D2CDC53293BAA2C0006A612 /* Gourmet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2CDC52293BAA2C0006A612 /* Gourmet.swift */; };
+		3D2CDC55293BABE10006A612 /* GourmetRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2CDC54293BABE10006A612 /* GourmetRepository.swift */; };
 		3D6E032B2938FD0E00844F62 /* GourmetSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6E03292938FD0E00844F62 /* GourmetSearchViewController.swift */; };
 		3D6E032C2938FD0E00844F62 /* GourmetSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D6E032A2938FD0E00844F62 /* GourmetSearchViewController.xib */; };
 		3D6E032F2938FD2900844F62 /* FavoriteGourmetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6E032D2938FD2900844F62 /* FavoriteGourmetListViewController.swift */; };
@@ -60,6 +63,9 @@
 		3D2CDC44293B82510006A612 /* Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localized.swift; sourceTree = "<group>"; };
 		3D2CDC48293B9C560006A612 /* GourmetViewDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GourmetViewDataModel.swift; sourceTree = "<group>"; };
 		3D2CDC4A293BA0600006A612 /* FavoriteGourmetListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteGourmetListViewController.xib; sourceTree = "<group>"; };
+		3D2CDC4D293BA92D0006A612 /* GourmetAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GourmetAPI.swift; sourceTree = "<group>"; };
+		3D2CDC52293BAA2C0006A612 /* Gourmet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gourmet.swift; sourceTree = "<group>"; };
+		3D2CDC54293BABE10006A612 /* GourmetRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GourmetRepository.swift; sourceTree = "<group>"; };
 		3D6E03292938FD0E00844F62 /* GourmetSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GourmetSearchViewController.swift; sourceTree = "<group>"; };
 		3D6E032A2938FD0E00844F62 /* GourmetSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GourmetSearchViewController.xib; sourceTree = "<group>"; };
 		3D6E032D2938FD2900844F62 /* FavoriteGourmetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteGourmetListViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +136,9 @@
 		3D2CDC31293B54DD0006A612 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3D2CDC51293BAA230006A612 /* Entity */,
+				3D2CDC4F293BA9440006A612 /* API */,
+				3D2CDC4C293BA9070006A612 /* Repository */,
 				3D2CDC36293B55870006A612 /* ViewDataModels */,
 				3D2CDC32293B54F20006A612 /* GourmetSearchModel.swift */,
 				3D2CDC34293B54FD0006A612 /* FavoriteGourmetListModel.swift */,
@@ -178,6 +187,30 @@
 				3D2CDC3F293B7D620006A612 /* Localizable.strings */,
 			);
 			path = Localizable;
+			sourceTree = "<group>";
+		};
+		3D2CDC4C293BA9070006A612 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				3D2CDC54293BABE10006A612 /* GourmetRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		3D2CDC4F293BA9440006A612 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				3D2CDC4D293BA92D0006A612 /* GourmetAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		3D2CDC51293BAA230006A612 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				3D2CDC52293BAA2C0006A612 /* Gourmet.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		3D6E03282938FCD000844F62 /* ViewControllers */ = {
@@ -510,12 +543,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D6E032B2938FD0E00844F62 /* GourmetSearchViewController.swift in Sources */,
+				3D2CDC55293BABE10006A612 /* GourmetRepository.swift in Sources */,
 				3D6E5ABB2934F97400A74B0F /* TopTabViewController.swift in Sources */,
 				3D2CDC45293B82510006A612 /* Asset.swift in Sources */,
 				3D6E032F2938FD2900844F62 /* FavoriteGourmetListViewController.swift in Sources */,
 				3D2CDC46293B82510006A612 /* Localized.swift in Sources */,
 				3D2CDC33293B54F20006A612 /* GourmetSearchModel.swift in Sources */,
 				3D6E5AB72934F97400A74B0F /* AppDelegate.swift in Sources */,
+				3D2CDC53293BAA2C0006A612 /* Gourmet.swift in Sources */,
+				3D2CDC4E293BA92D0006A612 /* GourmetAPI.swift in Sources */,
 				3D6E5AB92934F97400A74B0F /* SceneDelegate.swift in Sources */,
 				3D2CDC49293B9C560006A612 /* GourmetViewDataModel.swift in Sources */,
 				3D2CDC35293B54FD0006A612 /* FavoriteGourmetListModel.swift in Sources */,
