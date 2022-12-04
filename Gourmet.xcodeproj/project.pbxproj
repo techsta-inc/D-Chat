@@ -17,6 +17,10 @@
 		3D2CDC4E293BA92D0006A612 /* GourmetAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2CDC4D293BA92D0006A612 /* GourmetAPI.swift */; };
 		3D2CDC53293BAA2C0006A612 /* Gourmet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2CDC52293BAA2C0006A612 /* Gourmet.swift */; };
 		3D2CDC55293BABE10006A612 /* GourmetRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2CDC54293BABE10006A612 /* GourmetRepository.swift */; };
+		3D4730B8293BBE350060EEE3 /* NSCacheUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4730B7293BBE350060EEE3 /* NSCacheUtility.swift */; };
+		3D4730BC293BC0590060EEE3 /* GourmetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4730BA293BC0590060EEE3 /* GourmetTableViewCell.swift */; };
+		3D4730BD293BC0590060EEE3 /* GourmetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D4730BB293BC0590060EEE3 /* GourmetTableViewCell.xib */; };
+		3D4730C0293BC0AC0060EEE3 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4730BF293BC0AC0060EEE3 /* UITableView+Extension.swift */; };
 		3D6E032B2938FD0E00844F62 /* GourmetSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6E03292938FD0E00844F62 /* GourmetSearchViewController.swift */; };
 		3D6E032C2938FD0E00844F62 /* GourmetSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D6E032A2938FD0E00844F62 /* GourmetSearchViewController.xib */; };
 		3D6E032F2938FD2900844F62 /* FavoriteGourmetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6E032D2938FD2900844F62 /* FavoriteGourmetListViewController.swift */; };
@@ -66,6 +70,10 @@
 		3D2CDC4D293BA92D0006A612 /* GourmetAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GourmetAPI.swift; sourceTree = "<group>"; };
 		3D2CDC52293BAA2C0006A612 /* Gourmet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gourmet.swift; sourceTree = "<group>"; };
 		3D2CDC54293BABE10006A612 /* GourmetRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GourmetRepository.swift; sourceTree = "<group>"; };
+		3D4730B7293BBE350060EEE3 /* NSCacheUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSCacheUtility.swift; sourceTree = "<group>"; };
+		3D4730BA293BC0590060EEE3 /* GourmetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GourmetTableViewCell.swift; sourceTree = "<group>"; };
+		3D4730BB293BC0590060EEE3 /* GourmetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GourmetTableViewCell.xib; sourceTree = "<group>"; };
+		3D4730BF293BC0AC0060EEE3 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		3D6E03292938FD0E00844F62 /* GourmetSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GourmetSearchViewController.swift; sourceTree = "<group>"; };
 		3D6E032A2938FD0E00844F62 /* GourmetSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GourmetSearchViewController.xib; sourceTree = "<group>"; };
 		3D6E032D2938FD2900844F62 /* FavoriteGourmetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteGourmetListViewController.swift; sourceTree = "<group>"; };
@@ -213,6 +221,40 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		3D4730B6293BBE110060EEE3 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				3D4730B7293BBE350060EEE3 /* NSCacheUtility.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		3D4730B9293BC01F0060EEE3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3D4730BA293BC0590060EEE3 /* GourmetTableViewCell.swift */,
+				3D4730BB293BC0590060EEE3 /* GourmetTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3D4730BE293BC0920060EEE3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3D4730BF293BC0AC0060EEE3 /* UITableView+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		3D4730C1293BC0D60060EEE3 /* GourmetCore */ = {
+			isa = PBXGroup;
+			children = (
+				3D4730BE293BC0920060EEE3 /* Extension */,
+				3D4730B6293BBE110060EEE3 /* Utility */,
+			);
+			path = GourmetCore;
+			sourceTree = "<group>";
+		};
 		3D6E03282938FCD000844F62 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,7 +293,9 @@
 		3D6E5AB52934F97400A74B0F /* Gourmet */ = {
 			isa = PBXGroup;
 			children = (
+				3D4730C1293BC0D60060EEE3 /* GourmetCore */,
 				3D2CDC3C293B7D0F0006A612 /* UIResource */,
+				3D4730B9293BC01F0060EEE3 /* Views */,
 				3D6E03282938FCD000844F62 /* ViewControllers */,
 				3D2CDC31293B54DD0006A612 /* Models */,
 				3D6E5AB62934F97400A74B0F /* AppDelegate.swift */,
@@ -409,6 +453,7 @@
 			files = (
 				3D6E032C2938FD0E00844F62 /* GourmetSearchViewController.xib in Resources */,
 				3D2CDC40293B7D620006A612 /* Localizable.strings in Resources */,
+				3D4730BD293BC0590060EEE3 /* GourmetTableViewCell.xib in Resources */,
 				3D6E5AC32934F97600A74B0F /* LaunchScreen.storyboard in Resources */,
 				3D6E5AC02934F97600A74B0F /* Assets.xcassets in Resources */,
 				3D2CDC4B293BA0600006A612 /* FavoriteGourmetListViewController.xib in Resources */,
@@ -546,15 +591,18 @@
 				3D2CDC55293BABE10006A612 /* GourmetRepository.swift in Sources */,
 				3D6E5ABB2934F97400A74B0F /* TopTabViewController.swift in Sources */,
 				3D2CDC45293B82510006A612 /* Asset.swift in Sources */,
+				3D4730B8293BBE350060EEE3 /* NSCacheUtility.swift in Sources */,
 				3D6E032F2938FD2900844F62 /* FavoriteGourmetListViewController.swift in Sources */,
 				3D2CDC46293B82510006A612 /* Localized.swift in Sources */,
 				3D2CDC33293B54F20006A612 /* GourmetSearchModel.swift in Sources */,
+				3D4730BC293BC0590060EEE3 /* GourmetTableViewCell.swift in Sources */,
 				3D6E5AB72934F97400A74B0F /* AppDelegate.swift in Sources */,
 				3D2CDC53293BAA2C0006A612 /* Gourmet.swift in Sources */,
 				3D2CDC4E293BA92D0006A612 /* GourmetAPI.swift in Sources */,
 				3D6E5AB92934F97400A74B0F /* SceneDelegate.swift in Sources */,
 				3D2CDC49293B9C560006A612 /* GourmetViewDataModel.swift in Sources */,
 				3D2CDC35293B54FD0006A612 /* FavoriteGourmetListModel.swift in Sources */,
+				3D4730C0293BC0AC0060EEE3 /* UITableView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

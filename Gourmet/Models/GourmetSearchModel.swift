@@ -29,7 +29,10 @@ final class GourmetSearchModel {
                 }
             case let .success(response):
                 let gourmetList = response.results.shop.map {
-                    GourmetViewDataModel(name: $0.name)
+                    GourmetViewDataModel(
+                        name: $0.name,
+                        shopIcon: $0.logoImage
+                    )
                 }
                 self?.gourmetList = gourmetList
                 DispatchQueue.main.async { [weak self] in
