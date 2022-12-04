@@ -45,7 +45,7 @@ final class TopTabViewController: UITabBarController {
     }
     private func setupAppearance() {
         let appearance = UITabBarAppearance()
-        appearance.backgroundColor = .systemOrange
+        appearance.backgroundColor = Asset.accentSubPrimary.color
         if #available(iOS 15.0, *) {
             tabBar.scrollEdgeAppearance = appearance
             tabBar.standardAppearance = appearance
