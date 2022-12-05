@@ -1,0 +1,16 @@
+# ハードコードをしないようにはできるが、
+# ローカライズを機能させるためには別途対応が必要
+strings:
+  inputs: ./Gourmet/UIResource/Resource/Localizable/Localizable.strings
+  outputs:
+    - templateName: flat-swift5
+      output: ./Gourmet/UIResource/Generated/Localized.swift
+      params:
+        publicAccess: true
+xcassets:
+  inputs: ./Gourmet/UIResource/Resource/Assets.xcassets
+  outputs:
+    - templateName: swift5
+      output: ./Gourmet/UIResource/Generated/Asset.swift
+      params:
+        publicAccess: true
