@@ -73,7 +73,7 @@ extension GourmetSearchViewController: CLLocationManagerDelegate {
         guard let location = locations.last else { return }
         let lat = Double(location.coordinate.latitude)
         let long = Double(location.coordinate.longitude)
-        gourmetSearchModel.setLocation(lat: lat, long: long)
+        Location.shared.longLat = .init(lat: lat, long: long)
     }
     // 記述しておかないと実行時エラーになる
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {

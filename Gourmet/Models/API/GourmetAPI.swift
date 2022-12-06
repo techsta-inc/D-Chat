@@ -16,16 +16,23 @@ struct GourmetAPI {
     static var baseURLString: String {
         "https://webservice.recruit.co.jp"
     }
+    static var defaultQueryItems: [URLQueryItem] {
+        var queryItems: [URLQueryItem] = [
+            .init(name: "format", value: "json"),
+            .init(name: "key", value: "YourAPIKey"),
+            .init(name: "count", value: "50")
+        ]
+        if let location = Location.shared.longLat {
+            queryItems.append(.init(name: "lat", value: "\(location.lat)"))
+            queryItems.append(.init(name: "lng", value: "\(location.long)"))
+        }
+        return queryItems
+    }
     struct SearchGourmetRequest: RequestType {
         typealias Response = HotPepperResponse
         var urlComponents: URLComponents = URLComponents(string: "\(GourmetAPI.baseURLString)/hotpepper/gourmet/v1/")!
         init(queryItems: [URLQueryItem]) {
-            let defaultQueryItems: [URLQueryItem] = [
-                .init(name: "format", value: "json"),
-                .init(name: "key", value: "1fcb68df514951cc"),
-                .init(name: "count", value: "50")
-            ]
-            urlComponents.queryItems = defaultQueryItems + queryItems
+            urlComponents.queryItems = GourmetAPI.defaultQueryItems + queryItems
         }
     }
 }
