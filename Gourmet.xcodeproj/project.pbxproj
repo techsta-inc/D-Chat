@@ -149,7 +149,6 @@
 				3D2CDC51293BAA230006A612 /* Entity */,
 				3D2CDC4F293BA9440006A612 /* API */,
 				3D2CDC4C293BA9070006A612 /* Repository */,
-				3D2CDC36293B55870006A612 /* ViewDataModels */,
 				3D2CDC32293B54F20006A612 /* GourmetSearchModel.swift */,
 				3D2CDC34293B54FD0006A612 /* FavoriteGourmetListModel.swift */,
 			);
@@ -234,6 +233,7 @@
 		3D4730B9293BC01F0060EEE3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3D2CDC36293B55870006A612 /* ViewDataModels */,
 				3D4730BA293BC0590060EEE3 /* GourmetTableViewCell.swift */,
 				3D4730BB293BC0590060EEE3 /* GourmetTableViewCell.xib */,
 			);
