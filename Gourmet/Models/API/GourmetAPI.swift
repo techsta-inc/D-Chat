@@ -19,7 +19,7 @@ struct GourmetAPI {
     static var defaultQueryItems: [URLQueryItem] {
         var queryItems: [URLQueryItem] = [
             .init(name: "format", value: "json"),
-            .init(name: "key", value: "YourAPIKey"),
+            .init(name: "key", value: APIKey.key),
             .init(name: "count", value: "50")
         ]
         if let location = Location.shared.longLat {
